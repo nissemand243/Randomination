@@ -58,6 +58,8 @@
             <ul id="nav-mobile" class="left">
               <li id="menu-page-one"><a href="#">Page 1</a></li>
               <li id="menu-page-two"><a href="#">Page 2</a></li>
+              <li id="menu-page-three"><a href="#!">Chuck Norris</a></li>
+              <li id="menu-page-four"><a href="#!">HUNDE!!!!!</a></li>
             </ul>
           </div>
         </nav>
@@ -114,6 +116,28 @@
       </div>
     </div>
 
+    <div id="page-three">
+        <div class="row">
+          <div class="col s12 m6">
+            <h4>Chuck Norris jokes Api</h4>
+            <hr />
+            <h5>Jokes from api.chucknorris.io</h5>
+          </div>
+        </div>
+        <div id="api-component-page-three">
+        </div>
+      </div>
+
+  <div id="page-four">
+      <div class="row">
+          <div class="col s12 m6">
+            <h4>Random User Generator</h4>
+            <hr />
+            <h5>Tilfældig Bruger Bliver Genereret</h5>
+          </div>
+        </div>
+        <div id="api-component-page-four">
+        </div>
   </div>
 
 
@@ -132,7 +156,7 @@
               <p>{{activity}}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
             </div>
           </div>
       </div>
@@ -163,6 +187,46 @@
     </div>
 </script>
 
+<!--Materialize card template for Chuck Norris jokes API-->
+<script id="api-card-template-three" type="text/x-handlebars-template">
+  <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">CHUCK NORRIS!!!: {{category}}</span>
+            <p>{{value}}</p>
+          </div>
+          <div class="card-action">
+              <a href="#!" onclick="getApiDataChuck('value')">New Joke</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</script>
+<!--Materialize card template til Random Dog pictures-->
+<script id="api-card-template-four" type="text/x-handlebars-template">
+  <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{message}}">
+            <span class="card-title">{{breeds}}</span>
+            <!--Knap til at få et nyt billede-->
+            <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="getDataPageFour('message')"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <p>Random Dog pictures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+
+
+
+
+<!--Card template for searcing at Chuck Norris jokes.-->
+
   <!-- Page functionality - Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script>
@@ -173,17 +237,29 @@
     // Setup handlebars for second API card
     var apiSourceTwo = $("#api-card-template-two").html();
     var apiTemplateTwo = Handlebars.compile(apiSourceTwo);
+    
+    //Handlebars for third API card
+    var apiSourceThree = $("#api-card-template-three").html();
+    var apiTemplateThree = Handlebars.compile(apiSourceThree);
+
+    //Handlebard til det fjerde API - random dog picture
+    var apiSourceFour = $("#api-card-template-four").html();
+    var apiTemplateFour = Handlebars.compile(apiSourceFour);
+
+
+
+    //Handlebars for the fourth card
 
     //Functions to actually get JSON data from external API's. When .done is called, you receive the data
     function getApiData(someparam) {
       $.ajax({
-        url: "https://www.boredapi.com/api/activity?participants=" + someparam,
+        url: "http://www.boredapi.com/api/activity/",
       }).done(function (data) {
         console.log(data);
         $('#api-component-page-one').html(apiTemplate(data));
       });
     }
-
+// tilfældigt API
     function getSomeOtherApiData(querystring) {
       $.ajax({
         url: "https://api.publicapis.org/" + querystring,
@@ -193,9 +269,35 @@
       });
     }
 
+    //Chuck norris random joke
+    function getApiDataChuck(someparam) {
+      $.ajax({
+        url: "https://api.chucknorris.io/jokes/random",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-three').html(apiTemplateThree(data));
+      });
+    }
+
+      //Tilfældigt hundebillede
+    function getDataPageFour(someparam) {
+      $.ajax({
+        url: "https://dog.ceo/api/breeds/image/random",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-four').html(apiTemplateFour(data));
+      });
+    }
+
+
+
+
+
     //Handle menu - first show page one no matter what
     getApiData(1)
     $('#page-two').hide();
+    $('#page-three').hide();
+    $('#page-four').hide();
 
     //When someone clicks the page one navigation link
     //This is the second way to make something happen, when you click an HTML element
@@ -203,12 +305,33 @@
       getApiData(1)
       $('#page-one').show();
       $('#page-two').hide();
+      $('#page-three').hide();
+      $('#page-four').hide();
     });
     //When someone clicks the page two navigation link
     $('#menu-page-two').click(function () {
       $('#page-one').hide();
       $('#page-two').show();
+      $('#page-three').hide();
+      $('#page-four').hide();
     });
+    //When page 3 navigation link is clicked
+    $('#menu-page-three').click(function () {
+      getApiDataChuck();
+      $('#page-one').hide();
+      $('#page-two').hide();
+      $('#page-three').show();
+      $("#page-four").hide();
+    });
+
+    //When page 4 navigation link is clicked
+    $('#menu-page-four').click(function () {
+      getDataPageFour();
+      $('#page-one').hide();
+      $('#page-two').hide();
+      $('#page-three').hide();
+      $('#page-four').show();
+    })
   </script>
 
   <!-- Compiled and minified JavaScript for Materialize functions-->
