@@ -1,14 +1,13 @@
-# api_one_page_template
-This is a one-page template to make a neat web-app using an external API with jQuery. The app use the following frameworks and boilerplates:
+Jeg har kun fået implementeret 2 Api'er.
+Det er fordi de ca 10 andre jeg har prøvet ikke har haft dokumentation der gjorde det muligt at bruge dem
+Det ene API går ud på at den tager et tilfældigt billede af en hund
+Det andet API henter en tilfældig joke fra Chucknorris API.
 
-<ul>
-<li><a href="https://github.com/toddmotto/public-apis">Some public API with little or no authentication</a></li>
-<li><a href="https://handlebarsjs.com/">Handlebars javascript</a></li>
-<li><a href="https://materializecss.com/">Materialize css</a></li>
-<li><a href="https://jquery.com/">jQuery</a></li>
-</ul>
+Jeg har forsøgt mig med et søgefelt, men kunne ikke få det til at virke til chuck norris API'et.
 
-To get started, download the project and open index.html in your browser as well as in a code editor. Study the structure to get an overall picture of how handlebars, jQuery and Materialize work together to show the results from the API queries. 
+Jeg har prøvet med en random name generator, men selve de kald jeg skulle bruge ti lat få det visuelle element hentet
+virkede ikke og viste derfor ingenting i mit card
 
-Use the template to create your own app with an API of your liking or needs. 
-      
+Jeg har også prøvet at få data ned fra en API med financiel data men den viste intet i selve mit card.
+
+Jeg har efterfølgende prøvet nogle forskellige API'er men kunne ikke få deres kode til at virke
