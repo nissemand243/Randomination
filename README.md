@@ -1,13 +1,19 @@
-Jeg har kun fået implementeret 2 Api'er.
-Det er fordi de ca 10 andre jeg har prøvet ikke har haft dokumentation der gjorde det muligt at bruge dem
-Det ene API går ud på at den tager et tilfældigt billede af en hund
-Det andet API henter en tilfældig joke fra Chucknorris API.
+Lidt Sjov Med API'ER
 
-Jeg har forsøgt mig med et søgefelt, men kunne ikke få det til at virke til chuck norris API'et.
+I dette projekt har jeg arbejdet med API'er og implementeret nogle funktioner fra forskellige API'er til en HTML fil og brugt nogle forskellige skabeloner. følgende er hvad jeg har brugt:
+Chuck norris API der genererer Chuck Norris jokes
+Random Dog Generator der genererer et tilfældigt billede af en hund
 
-Jeg har prøvet med en random name generator, men selve de kald jeg skulle bruge ti lat få det visuelle element hentet
-virkede ikke og viste derfor ingenting i mit card
+Det jeg vil med denne side er at få leget med nogle forskellige API'er og få prøvet noget forskelligt og få dette til at virke.
+Det vil jeg for at få et bedre indblik i måden man programmerer med API'er.
 
-Jeg har også prøvet at få data ned fra en API med financiel data men den viste intet i selve mit card.
+jQuery, Javascript, HTML og CSS kode elementer er brugt i koden.
 
-Jeg har efterfølgende prøvet nogle forskellige API'er men kunne ikke få deres kode til at virke
+Der er brugt følgende teknologier:
+Handlebarz
+Materialize css
+Googleapis javascript library
+jQuery Library
+Favicon images
+Google Icon Font
+Googleapis Fonts
