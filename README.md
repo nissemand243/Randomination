@@ -1,14 +1,19 @@
-# api_one_page_template
-This is a one-page template to make a neat web-app using an external API with jQuery. The app use the following frameworks and boilerplates:
+Lidt Sjov Med API'ER
 
-<ul>
-<li><a href="https://github.com/toddmotto/public-apis">Some public API with little or no authentication</a></li>
-<li><a href="https://handlebarsjs.com/">Handlebars javascript</a></li>
-<li><a href="https://materializecss.com/">Materialize css</a></li>
-<li><a href="https://jquery.com/">jQuery</a></li>
-</ul>
+I dette projekt har jeg arbejdet med API'er og implementeret nogle funktioner fra forskellige API'er til en HTML fil og brugt nogle forskellige skabeloner. følgende er hvad jeg har brugt:
+Chuck norris API der genererer Chuck Norris jokes
+Random Dog Generator der genererer et tilfældigt billede af en hund
 
-To get started, download the project and open index.html in your browser as well as in a code editor. Study the structure to get an overall picture of how handlebars, jQuery and Materialize work together to show the results from the API queries. 
+Det jeg vil med denne side er at få leget med nogle forskellige API'er og få prøvet noget forskelligt og få dette til at virke.
+Det vil jeg for at få et bedre indblik i måden man programmerer med API'er.
 
-Use the template to create your own app with an API of your liking or needs. 
-      
+jQuery, Javascript, HTML og CSS kode elementer er brugt i koden.
+
+Der er brugt følgende teknologier:
+Handlebarz
+Materialize css
+Googleapis javascript library
+jQuery Library
+Favicon images
+Google Icon Font
+Googleapis Fonts
