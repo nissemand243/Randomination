@@ -141,17 +141,19 @@
   <!-- MATERIALIZE CARD TEMPLATE TO BORED API ACTIVITY -->
   <script id="api-card-template" type="text/x-handlebars-template">
     <div class="row">
+      {{#each items}}
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Kanye Says: </span>
-              <p>{{quote}}</p>
+              <p>{{Category}}</p>
             </div>
             <div class="card-action">
                 <a href="#!" onclick="getApiData('value')">New Joke</a>
             </div>
           </div>
       </div>
+     {{/each}}
     </div>
 </script>
 
@@ -245,10 +247,10 @@
     //Functions to actually get JSON data from external API's. When .done is called, you receive the data
     function getApiData(someparam) {
       $.ajax({
-        url: "https://api.kanye.rest",
+        url: "http://nflarrest.com/api/v1/crime",
       }).done(function (data) {
         console.log(data);
-        $('#api-component-page-one').html(apiTemplate(data));
+        $('#api-component-page-one').html(apiTemplate(data.slice(1, 5)));
       });
     }
 // tilfældigt API
