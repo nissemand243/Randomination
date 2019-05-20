@@ -2,7 +2,7 @@ Alexander Søndergaard - 2.r Slotshaven Gymnasium - Årsprøve
 
 Randomized information collector
 
-https://nissemand243.github.io/playing_with_api/
+https://nissemand243.github.io/Randomination/
 
 I dette projekt har jeg arbejdet med API'er og implementeret nogle funktioner fra forskellige API'er til en HTML fil og brugt nogle forskellige skabeloner. følgende er hvad jeg har brugt:
 Chuck norris API, der genererer Chuck Norris jokes
