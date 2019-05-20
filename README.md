@@ -1,13 +1,17 @@
-Lidt Sjov Med API'ER
+Alexander Søndergaard - 2.r Slotshaven Gymnasium - Årsprøve
+
+Randomized information collector
+
+https://nissemand243.github.io/Randomination/
 
 I dette projekt har jeg arbejdet med API'er og implementeret nogle funktioner fra forskellige API'er til en HTML fil og brugt nogle forskellige skabeloner. følgende er hvad jeg har brugt:
-Chuck norris API der genererer Chuck Norris jokes
-Random Dog Generator der genererer et tilfældigt billede af en hund
+Chuck norris API, der genererer Chuck Norris jokes
+Random Dog Generator, der genererer et tilfældigt billede af en hund
+Kanye Rest API, der genererer en tilfældig quote fra kanye west.
 
-Det jeg vil med denne side er at få leget med nogle forskellige API'er og få prøvet noget forskelligt og få dette til at virke.
-Det vil jeg for at få et bedre indblik i måden man programmerer med API'er.
+Jeg vil med denne side skabe et sted for tilfældig information, der hentes ned til den nysgerrige bruger. Jeg har valgt at arbejde med API'er da det er spændende at hente data ned fra andre kilder for at modelere det efter eget behov.
 
-jQuery, Javascript, HTML og CSS kode elementer er brugt i koden.
+jQuery, Javascript, HTML og CSS er de kodesprog jeg har benyttet mig af i dette projekt.
 
 Der er brugt følgende teknologier:
 Handlebarz
