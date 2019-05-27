@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas - gør siden mobilvenlig
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,23 +18,30 @@
   <!--JAVASCRIPTS 
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <!--jQuery to make easier http calls-->
+  <!--jQuery to make easier http calls -- 
+    jeg benytter AJAX funktionen, der er en del af jQuery til at hente Data fra API'erne-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <!--Import Handlebars-->
+
+  <script>
+  // Handlebars er en form for advanceret "tag" system, det vil sige at Dataen i API'erne kan sættes i kategorier
+  // og man kan derefter vise data inddelt i disse tags, og på den måde sortere i den data der bliver vist.
+  </script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 
-  <!-- FONT
+  <!-- FONT -- bruges til at give et dejligt udseende til tekst på siden
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--Import Google Icon Font-->
+  <!--Import Google Icon Font  bruges til at giver et lækkert design til billeder-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!--Import materialize.css-->
+  <!--Import materialize.css  bruges til at give et lækkert design på siden-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
   <link rel="stylesheet" href="css/mystyles.css">
@@ -47,7 +54,8 @@
 
 <body>
 
-  <!-- Det primære layout på siden, her er brugt materialize CSS
+  <!-- Layoutet på siden, jeg indsætter materialize Card templates ind i selve page layoutet
+     der bygger på et premanufactured setup fra min lærer.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container" style="margin-top: 3%">
 
@@ -228,7 +236,7 @@
 
 
 
-<!--Card template for searcing at Chuck Norris jokes.-->
+
 
   <!-- Page functionality - Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -252,6 +260,18 @@
 
     //Functions to actually get JSON data from external API's. When .done is called, you receive the data
 
+
+// functions work like this:
+/*
+funktion "navn"(parameter){
+  $.ajax({
+    url: "hjemmesidens url",
+  }).done(funktion(data){
+    console.log(data);
+    $('klassen tilhørende den template, hvori dataen skal placeres').html("variablen til handlebars compileren"(data));
+  })
+}
+*/
     // Jeg henter data fra Kanye Rest API'et
     function getApiData(someparam) {
       $.ajax({
